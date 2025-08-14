@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     modalInstance.show();
     const turnstileWidget = turnstile.render('.turnstile', {
-        sitekey: '0x4AAAAAABruwz9ZAFRpbfzJ',
+        sitekey: '0x4AAAAAABrvPEVbxJhK_XYd',
         callback(token) {
             modalInstance.hide();
         }

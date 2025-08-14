@@ -4416,16 +4416,6 @@ export default [
           title: '延熙',
         },
       ]
-    },
-    {
-      expYears: 1145,
-      data: [
-        {
-          emperor: '(南)宋高宗',
-          year: '十五年',
-          title: '绍兴'
-        }
-      ]
-    },
+    }
   ]
 ];

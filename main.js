@@ -25,6 +25,7 @@ const app = new Vue({
         }
       }
     },
+    changeCaptcha() {},
     deleteAll() {
       this.res = [];
       this.y = null;

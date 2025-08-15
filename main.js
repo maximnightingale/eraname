@@ -74,7 +74,7 @@ const app = new Vue({
         this.load = true;
       }
     });
-    alert("目前进度:公元243年");
+    alert("目前进度:公元280年");
     this.$nextTick(() => {
       this.initPopovers();
     });

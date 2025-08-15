@@ -5,7 +5,8 @@ const app = new Vue({
   data: {
     y: null,
     res: [],
-    type: 'AD'
+    type: 'AD',
+    tc: "turnstile"
   },
   methods: {
     query() {
@@ -25,7 +26,26 @@ const app = new Vue({
         }
       }
     },
-    changeCaptcha() {},
+    changeCaptcha() {
+      const tcel = document.querySelector('.turnstile');
+      if(this.tc === "turnstile") {
+        tcel.classList.replace(this.tc, "h-captcha");
+        hcaptcha.render('.h-captcha', {
+          sitekey: 'a276442c-f5fa-462a-92a0-2c7897ace8a6',
+          callback(token) {
+            modalInstance.hide();
+          }
+        });
+      } else {
+        tcel.classList.replace(this.tc, "turnstile");
+        const turnstileWidget = turnstile.render('.turnstile', {
+          sitekey: '0x4AAAAAABrvPEVbxJhK_XYd',
+          callback(token) {
+              modalInstance.hide();
+          }
+        });
+      }
+    },
     deleteAll() {
       this.res = [];
       this.y = null;

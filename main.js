@@ -68,7 +68,7 @@ const app = new Vue({
     const turnstileEl = document.querySelector('.turnstile');
     this.turnstileWidget = turnstile.render(turnstileEl, {
       sitekey: '0x4AAAAAABrvPEVbxJhK_XYd',
-      callback(token) {
+      callback: (token) => {
         this.load = true;
       }
     });

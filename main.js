@@ -26,7 +26,6 @@ const app = new Vue({
         }
       }
     },
-    reset() {turnstile.reset('.turnstile');},
     deleteAll() {
       this.res = [];
       this.y = null;

@@ -69,6 +69,8 @@ const app = new Vue({
     this.turnstileWidget = turnstile.render(turnstileEl, {
       sitekey: '0x4AAAAAABr9Fu0IYJcWvE3T',
       callback: (token) => {
+        turnstile.remove(this.turnstileWidget);
+        this.turnstileWidget = null;
         this.load = true;
       }
     });

@@ -65,14 +65,14 @@ const app = new Vue({
     }
   },
   mounted() {
-    alert("目前进度:公元243年");
     const turnstileEl = document.querySelector('.turnstile');
     this.turnstileWidget = turnstile.render(turnstileEl, {
-      sitekey: '0x4AAAAAABrvPEVbxJhK_XYd',
+      sitekey: '0x4AAAAAABr9Fu0IYJcWvE3T',
       callback: (token) => {
         this.load = true;
       }
     });
+    alert("目前进度:公元243年");
     this.$nextTick(() => {
       this.initPopovers();
     });

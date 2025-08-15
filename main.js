@@ -6,7 +6,8 @@ const app = new Vue({
     y: null,
     res: [],
     type: 'AD',
-    tc: "turnstile"
+    load: false,
+    turnstileWidget:null
   },
   methods: {
     query() {
@@ -64,6 +65,12 @@ const app = new Vue({
     }
   },
   mounted() {
+    this.turnstileWidget = turnstile.render('.turnstile', {
+      sitekey: '0x4AAAAAABrvPEVbxJhK_XYd',
+      callback(token) {
+        this.load = true;
+      }
+    });
     this.$nextTick(() => {
       this.initPopovers();
     });

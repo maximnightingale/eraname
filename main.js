@@ -1,7 +1,7 @@
 import titles from './titles.js';
 
 const app = new Vue({
-  el: '.container-fluid',
+  el: '.template',
   data: {
     y: null,
     res: [],

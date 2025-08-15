@@ -7,7 +7,7 @@ const app = new Vue({
     res: [],
     type: 'AD',
     load: false,
-    turnstileWidget:null
+    turnstileWidget: null
   },
   methods: {
     query() {

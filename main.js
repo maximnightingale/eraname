@@ -41,7 +41,7 @@ const app = new Vue({
       );
       popoverTriggerList.map((triggerEl) => {
         const popover = new bootstrap.Popover(triggerEl, {
-          customClass: 'kai'
+          customClass: 'otitles'
         });
         document.addEventListener('click', (e) => {
           const isClickInside = triggerEl.contains(e.target);
